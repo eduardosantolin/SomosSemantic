@@ -79,9 +79,8 @@ nav a:hover { color: var(--primary-green); }
 
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* Footer Atualizado */
 footer {
-    background-color: #080b11; /* Fundo bem escuro conforme o print */
+    background-color: #080b11;
     padding: 80px 10% 30px;
     border-top: 1px solid #1f2937;
     font-size: 0.95rem;
@@ -106,7 +105,6 @@ footer {
     font-weight: 600;
 }
 
-/* Coluna 1: Marca */
 .footer-brand {
     display: flex;
     align-items: center;
@@ -118,7 +116,7 @@ footer {
     height: 45px;
     width: 45px;
     object-fit: contain;
-    background-color: rgba(255,255,255,0.05); /* Leve círculo caso a imagem precise */
+    background-color: rgba(255,255,255,0.05); 
     border-radius: 50%;
     padding: 5px;
 }
@@ -178,7 +176,7 @@ footer {
 #newsletter-form button {
     padding: 0 20px;
     border: none;
-    background-color: #00a859; /* Verde mais ajustado ao print */
+    background-color: #00a859;
     color: white;
     border-radius: 0 6px 6px 0;
     cursor: pointer;
@@ -192,7 +190,6 @@ footer {
     background-color: #00e676;
 }
 
-/* Redes Sociais */
 .social-links {
     display: flex;
     gap: 15px;
@@ -217,7 +214,6 @@ footer {
     background-color: rgba(255,255,255,0.05);
 }
 
-/* Coluna 2: Links Rápidos */
 .links-col ul {
     list-style: none;
 }
@@ -236,7 +232,6 @@ footer {
     color: var(--text-light);
 }
 
-/* Coluna 3: Contato */
 .contact-item {
     display: flex;
     align-items: flex-start;
@@ -245,7 +240,7 @@ footer {
 }
 
 .contact-item .material-symbols-outlined {
-    color: #3b82f6; /* Azul dos ícones */
+    color: #3b82f6;
     font-size: 20px;
     margin-top: 2px;
 }
@@ -258,7 +253,7 @@ footer {
 }
 
 .contact-link {
-    color: #3b82f6; /* Azul dos textos clicáveis */
+    color: #3b82f6;
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -270,7 +265,7 @@ footer {
 
 .help-box {
     margin-top: 40px;
-    text-align: right; /* Alinhado à direita como no print */
+    text-align: right;
 }
 
 .help-box p {
@@ -278,7 +273,6 @@ footer {
     margin-bottom: 5px;
 }
 
-/* Footer Bottom */
 .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -303,7 +297,6 @@ footer {
     color: var(--text-light);
 }
 
-/* Responsividade do Footer */
 @media (max-width: 900px) {
     .footer-top {
         grid-template-columns: 1fr;
@@ -318,5 +311,103 @@ footer {
         flex-direction: column;
         gap: 15px;
         text-align: center;
+    }
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE & TABLETS)
+========================================= */
+
+@media (max-width: 900px) {
+    /* Ajustes Gerais de Espaçamento */
+    .section-padding { padding: 60px 5%; }
+    .section-title { font-size: 2rem; }
+    
+    /* Header e Navegação */
+    header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    nav a { margin-left: 0; }
+
+    /* Seção Hero (Topo) */
+    .hero { padding: 80px 15px; }
+    .hero-logo { max-width: 80%; }
+    .hero h1 { font-size: 1.8rem; }
+    .hero-details { 
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    /* Galeria e Estatísticas */
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Transforma em 1 coluna */
+    }
+    .gallery-item.large {
+        grid-row: auto; /* Tira a altura dupla da imagem maior */
+        height: 250px;
+    }
+    .stats-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Informações do Local */
+    .comodidades {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Cronograma */
+    .tabs {
+        flex-wrap: wrap;
+    }
+    .tab-btn {
+        width: 100%; /* Botões do cronograma ocupam toda a tela */
+        text-align: center;
+    }
+    .timeline-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .timeline-item .time {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    /* Newsletter do Rodapé (ajuste fino) */
+    .newsletter-box {
+        max-width: 100%;
+    }
+    #newsletter-form input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes extras para celulares muito pequenos */
+    .hero h1 { font-size: 1.5rem; }
+    .card { min-width: 100%; }
+    .btn-primary { width: 100%; } /* Botão de inscrição ocupa a largura toda */
+    
+    /* Ajuste no form da Newsletter para telas minúsculas */
+    #newsletter-form {
+        flex-direction: column;
+    }
+    #newsletter-form input {
+        border-radius: 6px;
+        border: 1px solid #1f2937;
+        margin-bottom: 10px;
+    }
+    #newsletter-form button {
+        border-radius: 6px;
+        padding: 12px;
     }
 }
