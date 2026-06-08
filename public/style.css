@@ -314,16 +314,10 @@ footer {
     }
 }
 
-/* =========================================
-   RESPONSIVIDADE (MOBILE & TABLETS)
-========================================= */
-
 @media (max-width: 900px) {
-    /* Ajustes Gerais de Espaçamento */
     .section-padding { padding: 60px 5%; }
     .section-title { font-size: 2rem; }
     
-    /* Header e Navegação */
     header {
         flex-direction: column;
         padding: 15px;
@@ -337,7 +331,6 @@ footer {
     }
     nav a { margin-left: 0; }
 
-    /* Seção Hero (Topo) */
     .hero { padding: 80px 15px; }
     .hero-logo { max-width: 80%; }
     .hero h1 { font-size: 1.8rem; }
@@ -346,12 +339,11 @@ footer {
         gap: 10px; 
     }
 
-    /* Galeria e Estatísticas */
     .gallery-grid {
-        grid-template-columns: 1fr; /* Transforma em 1 coluna */
+        grid-template-columns: 1fr;
     }
     .gallery-item.large {
-        grid-row: auto; /* Tira a altura dupla da imagem maior */
+        grid-row: auto;
         height: 250px;
     }
     .stats-container {
@@ -359,18 +351,16 @@ footer {
         gap: 30px;
     }
 
-    /* Informações do Local */
     .comodidades {
         flex-direction: column;
         gap: 10px;
     }
 
-    /* Cronograma */
     .tabs {
         flex-wrap: wrap;
     }
     .tab-btn {
-        width: 100%; /* Botões do cronograma ocupam toda a tela */
+        width: 100%;
         text-align: center;
     }
     .timeline-item {
@@ -381,8 +371,6 @@ footer {
         width: 100%;
         margin-bottom: 5px;
     }
-
-    /* Newsletter do Rodapé (ajuste fino) */
     .newsletter-box {
         max-width: 100%;
     }
@@ -392,12 +380,10 @@ footer {
 }
 
 @media (max-width: 480px) {
-    /* Ajustes extras para celulares muito pequenos */
     .hero h1 { font-size: 1.5rem; }
     .card { min-width: 100%; }
-    .btn-primary { width: 100%; } /* Botão de inscrição ocupa a largura toda */
+    .btn-primary { width: 100%; }
     
-    /* Ajuste no form da Newsletter para telas minúsculas */
     #newsletter-form {
         flex-direction: column;
     }
